@@ -269,7 +269,7 @@ function resumePdfToJson(cb) {
 
 
             // if the next line is the section after the special section
-            if (chunks[i + 1] === next || !next) {
+            if (next && (chunks[i + 1] === next || !next)) {
                 subsection = false;
                 listsection = false;
                 onelinesection = false;
