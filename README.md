@@ -14,7 +14,7 @@ npm install linkedin-resume-pdf-to-json --save-dev
 ### Return JSON
 ```js
 
-var resumePdfToJson = require('resume-pdf-to-json');
+var resumePdfToJson = require('linkedin-resume-pdf-to-json');
 
 var path = 'data/[FirstLast].pdf';
 
@@ -30,7 +30,7 @@ return resumePdfToJson(path)
 ### Return JSON + Output JSON File
 ```js
 
-var resumePdfToJson = require('resume-pdf-to-json');
+var resumePdfToJson = require('linkedin-resume-pdf-to-json');
 
 var path = 'data/[FirstLast].pdf';
 var output = 'data/outputname.json';
