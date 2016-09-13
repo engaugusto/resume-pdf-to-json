@@ -27,7 +27,8 @@ var settings = {
         'Skills & Expertise',
         'Education',
         'person has recommended',
-        'people have recommended'
+        'people have recommended',
+        'Organizations'
     ],
     'subsections': [
         'Experience',
