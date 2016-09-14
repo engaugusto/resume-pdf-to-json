@@ -168,12 +168,20 @@ function resumePdfToJson(cb) {
         var firstName = dataHeader.head[0].split(' ')[0];
 
         // clean out the extra headers
-        for (var x = 0; x < chunks.length; x++) {
+        var x = chunks.length
+        while (x--) {
             cut = dataHeader.head.indexOf(chunks[x]);
             if ( cut > -1 ) {
                 chunks.splice(x, 1);
             }
         }
+
+        //for (var x = 0; x < chunks.length; x++) {
+        //    cut = dataHeader.head.indexOf(chunks[x]);
+        //    if ( cut > -1 ) {
+        //        chunks.splice(x, 1);
+        //    }
+        //}
 
         // create index reference to reflect order of
         // headers in the pdf
@@ -319,7 +327,7 @@ function resumePdfToJson(cb) {
                 // if the time isn't time, and the line isn't
                 // a page number, and the line isn't one of
                 // the headline vars, add line to the section text.
-                } else if (line && !service.isPageNum(line) && head.indexOf(line) === -1) {
+                } else if (head && line && !service.isPageNum(line) && head.indexOf(line) === -1 && data[is].sections[cnt] && data[is].sections[cnt].text) {
                     // concantentate section text
                     // console.log(line);
                     t = data[is].sections[cnt].text;
